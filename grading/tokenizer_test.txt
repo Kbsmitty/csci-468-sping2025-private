@@ -25,8 +25,8 @@
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running edu.montana.csci.csci468.tokenizer.CatScriptTokenizerTest
-[ERROR] Tests run: 16, Failures: 8, Errors: 0, Skipped: 0, Time elapsed: 0.039 s <<< FAILURE! - in edu.montana.csci.csci468.tokenizer.CatScriptTokenizerTest
-[ERROR] escapedStrings  Time elapsed: 0.021 s  <<< FAILURE!
+[ERROR] Tests run: 16, Failures: 8, Errors: 0, Skipped: 0, Time elapsed: 0.038 s <<< FAILURE! - in edu.montana.csci.csci468.tokenizer.CatScriptTokenizerTest
+[ERROR] escapedStrings  Time elapsed: 0.019 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <[STRING, EOF]> but was: <[ERROR, IDENTIFIER, ERROR, ERROR, IDENTIFIER, ERROR, EOF]>
 	at edu.montana.csci.csci468.tokenizer.CatScriptTokenizerTest.escapedStrings(CatScriptTokenizerTest.java:51)
 
@@ -34,7 +34,7 @@ org.opentest4j.AssertionFailedError: expected: <[STRING, EOF]> but was: <[ERROR,
 org.opentest4j.AssertionFailedError: expected: <2> but was: <1>
 	at edu.montana.csci.csci468.tokenizer.CatScriptTokenizerTest.linesAreCorrect(CatScriptTokenizerTest.java:108)
 
-[ERROR] basicString  Time elapsed: 0.001 s  <<< FAILURE!
+[ERROR] basicString  Time elapsed: 0 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <[STRING, EOF]> but was: <[ERROR, IDENTIFIER, ERROR, EOF]>
 	at edu.montana.csci.csci468.tokenizer.CatScriptTokenizerTest.basicString(CatScriptTokenizerTest.java:33)
 
@@ -76,8 +76,8 @@ org.opentest4j.AssertionFailedError: expected: <[ERROR, EOF]> but was: <[ERROR, 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.611 s
-[INFO] Finished at: 2025-01-29T15:03:07-07:00
+[INFO] Total time:  1.493 s
+[INFO] Finished at: 2025-02-03T14:17:53-07:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.1:test (default-test) on project csci-468-spring2022: There are test failures.
 [ERROR] 
