@@ -25,12 +25,12 @@
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running edu.montana.csci.csci468.tokenizer.CatScriptTokenizerTest
-[ERROR] Tests run: 16, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 0.037 s <<< FAILURE! - in edu.montana.csci.csci468.tokenizer.CatScriptTokenizerTest
-[ERROR] escapedStrings  Time elapsed: 0.019 s  <<< FAILURE!
+[ERROR] Tests run: 16, Failures: 5, Errors: 0, Skipped: 0, Time elapsed: 0.033 s <<< FAILURE! - in edu.montana.csci.csci468.tokenizer.CatScriptTokenizerTest
+[ERROR] escapedStrings  Time elapsed: 0.018 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <[STRING, EOF]> but was: <[ERROR, IDENTIFIER, ERROR, ERROR, IDENTIFIER, ERROR, EOF]>
 	at edu.montana.csci.csci468.tokenizer.CatScriptTokenizerTest.escapedStrings(CatScriptTokenizerTest.java:51)
 
-[ERROR] basicString  Time elapsed: 0.002 s  <<< FAILURE!
+[ERROR] basicString  Time elapsed: 0 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <[STRING, EOF]> but was: <[ERROR, IDENTIFIER, ERROR, EOF]>
 	at edu.montana.csci.csci468.tokenizer.CatScriptTokenizerTest.basicString(CatScriptTokenizerTest.java:33)
 
@@ -38,7 +38,7 @@ org.opentest4j.AssertionFailedError: expected: <[STRING, EOF]> but was: <[ERROR,
 org.opentest4j.AssertionFailedError: expected: <[STRING, DOT, STRING, EOF]> but was: <[ERROR, ERROR, DOT, ERROR, ERROR, EOF]>
 	at edu.montana.csci.csci468.tokenizer.CatScriptTokenizerTest.compoundTokensTokenizeProperly(CatScriptTokenizerTest.java:96)
 
-[ERROR] lineOffsetsAreCorrect  Time elapsed: 0 s  <<< FAILURE!
+[ERROR] lineOffsetsAreCorrect  Time elapsed: 0.001 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <0> but was: <-1>
 	at edu.montana.csci.csci468.tokenizer.CatScriptTokenizerTest.lineOffsetsAreCorrect(CatScriptTokenizerTest.java:115)
 
@@ -61,8 +61,8 @@ org.opentest4j.AssertionFailedError: expected: <[ERROR, EOF]> but was: <[ERROR, 
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.352 s
-[INFO] Finished at: 2025-02-10T17:03:08-07:00
+[INFO] Total time:  1.378 s
+[INFO] Finished at: 2025-02-10T20:20:21-07:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.1:test (default-test) on project csci-468-spring2022: There are test failures.
 [ERROR] 
