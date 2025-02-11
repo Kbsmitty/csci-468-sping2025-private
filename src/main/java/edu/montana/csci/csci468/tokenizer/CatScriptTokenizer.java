@@ -40,6 +40,32 @@ public class CatScriptTokenizer {
 
     private boolean scanString() {
         // TODO implement string scanning here!
+        if (quotesChecker(peek())) {
+            int start = postion;
+            StringBuilder value = new StringBuilder();
+            takeChar();
+
+            while (!tokenizationEnd() && !quotesChecker(peek())) {
+                if (peek() == '\\') {
+                    takeChar();
+                    if (tokenizationEnd()) {
+                        tokenList.addToken(ERROR, "String escape error", postion, postion, line, lineOffset);
+                        return true;
+                    }
+                    value.append('\\').append(takeChar());
+                } else {
+                    value.append(takeChar());
+                }
+            }
+
+            if (!tokenizationEnd()) {
+                takeChar(); 
+                tokenList.addToken(STRING, value.toString(), start, postion, line, lineOffset);
+            } else {
+                tokenList.addToken(ERROR, "Unterminated string", postion, postion, line, lineOffset);
+            }
+            return true;
+        }
         return false;
     }
 
@@ -75,7 +101,7 @@ public class CatScriptTokenizer {
     }
 
     private void scanSyntax() {
-         // TODO - implement rest of syntax scanning
+        // TODO - implement rest of syntax scanning
         //      - implement comments
 
         int start = postion;
@@ -139,47 +165,22 @@ public class CatScriptTokenizer {
                 tokenList.addToken(ERROR, "<Unexpected Token: [" + c + "]>", start, postion, line, lineOffset);
                 break;
         }
-//        int start = postion;
-//        if(matchAndConsume('+')) {
-//            tokenList.addToken(PLUS, "+", start, postion, line, lineOffset);
-//        } else if(matchAndConsume('-')) {
-//            tokenList.addToken(MINUS, "-", start, postion, line, lineOffset);
-//        } else if(matchAndConsume('*')) {
-//            tokenList.addToken(MINUS, "*", start, postion, line, lineOffset);
-//        } else if(matchAndConsume('/')) {
-//            if (matchAndConsume('/')) {
-//                while (peek() != '\n' && !tokenizationEnd()) {
-//                    takeChar();
-//                }
-//            } else {
-//                tokenList.addToken(SLASH, "/", start, postion, line, lineOffset);
-//            }
-//        } else if(matchAndConsume('=')) {
-//            if (matchAndConsume('=')) {
-//                tokenList.addToken(EQUAL_EQUAL, "==", start, postion, line, lineOffset);
-//            } else {
-//                tokenList.addToken(EQUAL, "=", start, postion, line, lineOffset);
-//            }
-//        } else {
-//            tokenList.addToken(ERROR, "<Unexpected Token: [" + takeChar() + "]>", start, postion, line, lineOffset);
-//        }
     }
 
     private void consumeWhitespace() {
-         // TODO update line and lineOffsets
+        // TODO update line and lineOffsets
         while (!tokenizationEnd()) {
             char c = peek();
             if (c == ' ' || c == '\r' || c == '\t') {
-                postion++;
                 lineOffset++;
-                continue;
+                takeChar();
             } else if (c == '\n') {
-                postion++;
                 line++;
                 lineOffset = 0;
-                continue;
+                takeChar();
+            } else {
+                break;
             }
-            break;
         }
     }
 
@@ -190,6 +191,14 @@ public class CatScriptTokenizer {
     private char peek() {
         if (tokenizationEnd()) return '\0';
         return src.charAt(postion);
+    }
+
+    private boolean quotesChecker(char c) {
+        return c == '\"' || c == '\'';
+    }
+
+    private boolean filler(char c) {
+        return c == ' ' || c == '\r' || c == '\t' || c == '\n';
     }
 
     private boolean isAlpha(char c) {
@@ -209,6 +218,9 @@ public class CatScriptTokenizer {
     private char takeChar() {
         char c = src.charAt(postion);
         postion++;
+        if (!filler(c)) {
+            lineOffset++;
+        }
         return c;
     }
 
