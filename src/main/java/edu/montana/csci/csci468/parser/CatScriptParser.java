@@ -81,18 +81,45 @@ public class CatScriptParser {
     //============================================================
 
     private Expression parseExpression() {
-        return parseAdditiveExpression();
+        Expression expression = parseComparisonExpression();
+
+        while (tokens.match(EQUAL_EQUAL, BANG_EQUAL)) {
+            Token operator = tokens.consumeToken();
+            Expression rightHandSide = parseComparisonExpression();
+            expression = new EqualityExpression(operator, expression, rightHandSide);
+        }
+        return expression;
+    }
+
+    private Expression parseComparisonExpression() {
+        Expression expression = parseAdditiveExpression();
+
+        while (tokens.match(LESS, LESS_EQUAL, GREATER, GREATER_EQUAL)) {
+            Token operator = tokens.consumeToken();
+            Expression rightHandSide = parseAdditiveExpression();
+            expression = new ComparisonExpression(operator, expression, rightHandSide);
+        }
+        return expression;
     }
 
     private Expression parseAdditiveExpression() {
-        Expression expression = parseUnaryExpression();
+        Expression expression = parseFactorExpression();
+
         while (tokens.match(PLUS, MINUS)) {
             Token operator = tokens.consumeToken();
-            final Expression rightHandSide = parseUnaryExpression();
-            AdditiveExpression additiveExpression = new AdditiveExpression(operator, expression, rightHandSide);
-            additiveExpression.setStart(expression.getStart());
-            additiveExpression.setEnd(rightHandSide.getEnd());
-            expression = additiveExpression;
+            Expression rightHandSide = parseFactorExpression();
+            expression = new AdditiveExpression(operator, expression, rightHandSide);
+        }
+        return expression;
+    }
+
+    private Expression parseFactorExpression() {
+        Expression expression = parseUnaryExpression();
+
+        while (tokens.match(STAR, SLASH)) {
+            Token operator = tokens.consumeToken();
+            Expression rightHandSide = parseUnaryExpression();
+            expression = new FactorExpression(operator, expression, rightHandSide);
         }
         return expression;
     }
@@ -116,6 +143,80 @@ public class CatScriptParser {
             IntegerLiteralExpression integerExpression = new IntegerLiteralExpression(integerToken.getStringValue());
             integerExpression.setToken(integerToken);
             return integerExpression;
+        } else if (tokens.match(STRING)) {
+            Token stringToken = tokens.consumeToken();
+            StringLiteralExpression stringExpression = new StringLiteralExpression(stringToken.getStringValue());
+            stringExpression.setToken(stringToken);
+            return stringExpression;
+        } else if (tokens.match(LEFT_PAREN)) {
+            Token token = tokens.consumeToken();
+            Expression expr = parseExpression();
+            ParenthesizedExpression parenthesizedExpression = new ParenthesizedExpression(expr);
+            parenthesizedExpression.setStart(token);
+            Token endToken = require(RIGHT_PAREN, parenthesizedExpression);
+            parenthesizedExpression.setEnd(endToken);
+            return parenthesizedExpression;
+        } else if (tokens.match(LEFT_BRACKET)) {
+            Token start = tokens.consumeToken();
+            List<Expression> values = new ArrayList<>();
+
+            if (!tokens.match(RIGHT_BRACKET)) {
+                do {
+                    values.add(parseExpression());
+                } while (tokens.matchAndConsume(COMMA));
+            }
+
+            Token endToken = tokens.match(RIGHT_BRACKET) ? tokens.consumeToken() : null;
+            ListLiteralExpression llExpression = new ListLiteralExpression(values);
+            llExpression.setStart(start);
+            if (endToken != null) {
+                llExpression.setEnd(endToken);
+            } else {
+                llExpression.addError(ErrorType.UNTERMINATED_LIST, tokens.getCurrentToken());
+            }
+            return llExpression;
+        } else if (tokens.match(IDENTIFIER)) {
+            Token start = tokens.consumeToken();
+
+            if (tokens.match(LEFT_PAREN)) {
+                List<Expression> args = new ArrayList<>();
+                tokens.consumeToken(); // Consume '('
+
+                if (!tokens.match(RIGHT_PAREN)) {
+                    do {
+                        args.add(parseExpression());
+                    } while (tokens.matchAndConsume(COMMA));
+                }
+
+                Token end = tokens.match(RIGHT_PAREN) ? tokens.consumeToken() : null;
+                FunctionCallExpression functionCall = new FunctionCallExpression(start.getStringValue(), args);
+                functionCall.setStart(start);
+                if (end != null) {
+                    functionCall.setEnd(end);
+                } else {
+                    functionCall.addError(ErrorType.UNTERMINATED_ARG_LIST, tokens.getCurrentToken());
+                }
+                return functionCall;
+            } else {
+                IdentifierExpression identifierExpression = new IdentifierExpression(start.getStringValue());
+                identifierExpression.setToken(start);
+                return identifierExpression;
+            }
+        } else if (tokens.match(TRUE)) {
+            Token trueToken = tokens.consumeToken();
+            BooleanLiteralExpression trueExpression = new BooleanLiteralExpression(true);
+            trueExpression.setToken(trueToken);
+            return trueExpression;
+        } else if (tokens.match(FALSE)) {
+            Token falseToken = tokens.consumeToken();
+            BooleanLiteralExpression falseExpression = new BooleanLiteralExpression(false);
+            falseExpression.setToken(falseToken);
+            return falseExpression;
+        } else if (tokens.match(NULL)) {
+            Token nullToken = tokens.consumeToken();
+            NullLiteralExpression nullExpression = new NullLiteralExpression();
+            nullExpression.setToken(nullToken);
+            return nullExpression;
         } else {
             SyntaxErrorExpression syntaxErrorExpression = new SyntaxErrorExpression(tokens.consumeToken());
             return syntaxErrorExpression;
