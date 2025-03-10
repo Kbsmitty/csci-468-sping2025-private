@@ -1,0 +1,67 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -------------------< cs.msu.edu:csci-468-spring2022 >-------------------
+[INFO] Building csci-468-spring2022 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ csci-468-spring2022 ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] Copying 5 resources from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.1:compile (default-compile) @ csci-468-spring2022 ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 47 source files to /Users/carson/Projects/msu/classes/current/csci-468-spring2025/grading/scripts/repos/kyler_smith/target/classes
+[INFO] -------------------------------------------------------------
+[WARNING] COMPILATION WARNING : 
+[INFO] -------------------------------------------------------------
+[WARNING] /Users/carson/Projects/msu/classes/current/csci-468-spring2025/grading/scripts/repos/kyler_smith/src/main/java/edu/montana/csci/csci468/bytecode/MethodGenerator.java: /Users/carson/Projects/msu/classes/current/csci-468-spring2025/grading/scripts/repos/kyler_smith/src/main/java/edu/montana/csci/csci468/bytecode/MethodGenerator.java uses or overrides a deprecated API.
+[WARNING] /Users/carson/Projects/msu/classes/current/csci-468-spring2025/grading/scripts/repos/kyler_smith/src/main/java/edu/montana/csci/csci468/bytecode/MethodGenerator.java: Recompile with -Xlint:deprecation for details.
+[WARNING] /Users/carson/Projects/msu/classes/current/csci-468-spring2025/grading/scripts/repos/kyler_smith/src/main/java/edu/montana/csci/csci468/parser/CatscriptType.java: Some input files use unchecked or unsafe operations.
+[WARNING] /Users/carson/Projects/msu/classes/current/csci-468-spring2025/grading/scripts/repos/kyler_smith/src/main/java/edu/montana/csci/csci468/parser/CatscriptType.java: Recompile with -Xlint:unchecked for details.
+[INFO] 4 warnings 
+[INFO] -------------------------------------------------------------
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /Users/carson/Projects/msu/classes/current/csci-468-spring2025/grading/scripts/repos/kyler_smith/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[161,13] cannot find symbol
+  symbol:   class List
+  location: class edu.montana.csci.csci468.parser.CatScriptParser
+[ERROR] /Users/carson/Projects/msu/classes/current/csci-468-spring2025/grading/scripts/repos/kyler_smith/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[161,43] cannot find symbol
+  symbol:   class ArrayList
+  location: class edu.montana.csci.csci468.parser.CatScriptParser
+[ERROR] /Users/carson/Projects/msu/classes/current/csci-468-spring2025/grading/scripts/repos/kyler_smith/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[182,17] cannot find symbol
+  symbol:   class List
+  location: class edu.montana.csci.csci468.parser.CatScriptParser
+[ERROR] /Users/carson/Projects/msu/classes/current/csci-468-spring2025/grading/scripts/repos/kyler_smith/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[182,45] cannot find symbol
+  symbol:   class ArrayList
+  location: class edu.montana.csci.csci468.parser.CatScriptParser
+[INFO] 4 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.418 s
+[INFO] Finished at: 2025-03-10T10:10:13-06:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:compile (default-compile) on project csci-468-spring2022: Compilation failure: Compilation failure: 
+[ERROR] /Users/carson/Projects/msu/classes/current/csci-468-spring2025/grading/scripts/repos/kyler_smith/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[161,13] cannot find symbol
+[ERROR]   symbol:   class List
+[ERROR]   location: class edu.montana.csci.csci468.parser.CatScriptParser
+[ERROR] /Users/carson/Projects/msu/classes/current/csci-468-spring2025/grading/scripts/repos/kyler_smith/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[161,43] cannot find symbol
+[ERROR]   symbol:   class ArrayList
+[ERROR]   location: class edu.montana.csci.csci468.parser.CatScriptParser
+[ERROR] /Users/carson/Projects/msu/classes/current/csci-468-spring2025/grading/scripts/repos/kyler_smith/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[182,17] cannot find symbol
+[ERROR]   symbol:   class List
+[ERROR]   location: class edu.montana.csci.csci468.parser.CatScriptParser
+[ERROR] /Users/carson/Projects/msu/classes/current/csci-468-spring2025/grading/scripts/repos/kyler_smith/src/main/java/edu/montana/csci/csci468/parser/CatScriptParser.java:[182,45] cannot find symbol
+[ERROR]   symbol:   class ArrayList
+[ERROR]   location: class edu.montana.csci.csci468.parser.CatScriptParser
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException
