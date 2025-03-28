@@ -73,7 +73,15 @@ public class ForStatement extends Statement {
     //==============================================================
     @Override
     public void execute(CatscriptRuntime runtime) {
-        super.execute(runtime);
+        Iterable listToIterateOver = (Iterable) expression.evaluate(runtime);
+        runtime.pushScope();
+        for(Object currentValue:listToIterateOver){
+            runtime.setValue(variableName,currentValue);
+            for(Statement statement:body){
+                statement.execute(runtime);
+            }
+        }
+        runtime.popScope();
     }
 
     @Override
