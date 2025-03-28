@@ -32,15 +32,11 @@ public class AssignmentStatement extends Statement {
 
     @Override
     public void validate(SymbolTable symbolTable) {
-        expression.validate(symbolTable);
-        type = symbolTable.getSymbolType(variableName);
-        global = symbolTable.isSymbolGlobal(variableName);
-
-        CatscriptType symbolType = symbolTable.getSymbolType(getVariableName());
+          CatscriptType symbolType = symbolTable.getSymbolType(getVariableName());
         if (symbolType == null) {
             addError(ErrorType.UNKNOWN_NAME);
-        } else {
-            // TODO - verify compatibility of types
+        } else if(!symbolType.equals(expression.getType())) {
+           addError(ErrorType.INCOMPATIBLE_TYPES);
         }
     }
 
@@ -49,7 +45,8 @@ public class AssignmentStatement extends Statement {
     //==============================================================
     @Override
     public void execute(CatscriptRuntime runtime) {
-        super.execute(runtime);
+       Object evaluate = expression.evaluate(runtime);
+        runtime.setValue(variableName, evaluate);
     }
 
     @Override
