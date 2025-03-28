@@ -16,24 +16,42 @@ public class ReturnStatement extends Statement {
         return expression;
     }
 
+     public void setFunctionDefinition(FunctionDefinitionStatement func) {
+        this.function = func;
+    }
+
     public FunctionDefinitionStatement getFunctionDefinitionStatement() {
-        // TODO implement - recurse up the parent hierarchy and find a FunctionDefinitionStatement
-        // use the `instanceof` operator in java
-        // if there are none, return null
+        if (function != null) {
+            return function;
+        }
+        ParseElement current = this;
+        while (current != null) {
+            if (current instanceof FunctionDefinitionStatement) {
+                function = (FunctionDefinitionStatement) current;
+                return function;
+            }
+            current = current.getParent();
+        }
         return null;
     }
 
 
     @Override
     public void validate(SymbolTable symbolTable) {
-        FunctionDefinitionStatement function = getFunctionDefinitionStatement();
-        if (function == null) {
+        if(function == null) {
+            addError(ErrorType.INVALID_RETURN_STATEMENT);
+            return;
+        }
 
+        if (expression != null) {
+            expression.validate(symbolTable);
+            if (!function.getType().isAssignableFrom(expression.getType())) {
+                expression.addError(ErrorType.INCOMPATIBLE_TYPES);
+            }
         } else {
-            // TODO - if there is an expression associated with this return statement
-            // ensure it is compatible with function.getType() or add an ErrorType.INCOMPATIBLE_TYPE error
-
-
+            if (!function.getType().equals(CatscriptType.VOID)) {
+                addError(ErrorType.INCOMPATIBLE_TYPES);
+            }
         }
     }
 
@@ -42,7 +60,11 @@ public class ReturnStatement extends Statement {
     //==============================================================
     @Override
     public void execute(CatscriptRuntime runtime) {
-        super.execute(runtime);
+        Object value = null;
+        if(expression != null){
+            value = expression.evaluate(runtime);
+        }
+        throw new ReturnException(value);
     }
 
     @Override
