@@ -25,65 +25,19 @@
 [INFO] -------------------------------------------------------------
 [ERROR] COMPILATION ERROR : 
 [INFO] -------------------------------------------------------------
-[ERROR] /Users/carson/Projects/msu/classes/current/csci-468-spring2025-wrong/grading/scripts/repos/kyler_smith/src/main/java/edu/montana/csci/csci468/parser/statements/ReturnStatement.java:[20,13] cannot find symbol
-  symbol: variable function
-[ERROR] /Users/carson/Projects/msu/classes/current/csci-468-spring2025-wrong/grading/scripts/repos/kyler_smith/src/main/java/edu/montana/csci/csci468/parser/statements/ReturnStatement.java:[24,13] cannot find symbol
-  symbol:   variable function
-  location: class edu.montana.csci.csci468.parser.statements.ReturnStatement
-[ERROR] /Users/carson/Projects/msu/classes/current/csci-468-spring2025-wrong/grading/scripts/repos/kyler_smith/src/main/java/edu/montana/csci/csci468/parser/statements/ReturnStatement.java:[25,20] cannot find symbol
-  symbol:   variable function
-  location: class edu.montana.csci.csci468.parser.statements.ReturnStatement
-[ERROR] /Users/carson/Projects/msu/classes/current/csci-468-spring2025-wrong/grading/scripts/repos/kyler_smith/src/main/java/edu/montana/csci/csci468/parser/statements/ReturnStatement.java:[30,17] cannot find symbol
-  symbol:   variable function
-  location: class edu.montana.csci.csci468.parser.statements.ReturnStatement
-[ERROR] /Users/carson/Projects/msu/classes/current/csci-468-spring2025-wrong/grading/scripts/repos/kyler_smith/src/main/java/edu/montana/csci/csci468/parser/statements/ReturnStatement.java:[31,24] cannot find symbol
-  symbol:   variable function
-  location: class edu.montana.csci.csci468.parser.statements.ReturnStatement
-[ERROR] /Users/carson/Projects/msu/classes/current/csci-468-spring2025-wrong/grading/scripts/repos/kyler_smith/src/main/java/edu/montana/csci/csci468/parser/statements/ReturnStatement.java:[41,12] cannot find symbol
-  symbol:   variable function
-  location: class edu.montana.csci.csci468.parser.statements.ReturnStatement
-[ERROR] /Users/carson/Projects/msu/classes/current/csci-468-spring2025-wrong/grading/scripts/repos/kyler_smith/src/main/java/edu/montana/csci/csci468/parser/statements/ReturnStatement.java:[48,18] cannot find symbol
-  symbol:   variable function
-  location: class edu.montana.csci.csci468.parser.statements.ReturnStatement
-[ERROR] /Users/carson/Projects/msu/classes/current/csci-468-spring2025-wrong/grading/scripts/repos/kyler_smith/src/main/java/edu/montana/csci/csci468/parser/statements/ReturnStatement.java:[52,18] cannot find symbol
-  symbol:   variable function
-  location: class edu.montana.csci.csci468.parser.statements.ReturnStatement
-[ERROR] /Users/carson/Projects/msu/classes/current/csci-468-spring2025-wrong/grading/scripts/repos/kyler_smith/src/main/java/edu/montana/csci/csci468/parser/statements/ReturnStatement.java:[67,19] cannot find symbol
+[ERROR] /Users/carson/Projects/msu/classes/current/csci-468-spring2025-wrong/grading/scripts/repos/kyler_smith/src/main/java/edu/montana/csci/csci468/parser/statements/ReturnStatement.java:[68,19] cannot find symbol
   symbol:   class ReturnException
   location: class edu.montana.csci.csci468.parser.statements.ReturnStatement
-[INFO] 9 errors 
+[INFO] 1 error
 [INFO] -------------------------------------------------------------
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.513 s
-[INFO] Finished at: 2025-03-28T19:21:07-06:00
+[INFO] Total time:  1.420 s
+[INFO] Finished at: 2025-03-28T20:57:35-06:00
 [INFO] ------------------------------------------------------------------------
-[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:compile (default-compile) on project csci-468-spring2022: Compilation failure: Compilation failure: 
-[ERROR] /Users/carson/Projects/msu/classes/current/csci-468-spring2025-wrong/grading/scripts/repos/kyler_smith/src/main/java/edu/montana/csci/csci468/parser/statements/ReturnStatement.java:[20,13] cannot find symbol
-[ERROR]   symbol: variable function
-[ERROR] /Users/carson/Projects/msu/classes/current/csci-468-spring2025-wrong/grading/scripts/repos/kyler_smith/src/main/java/edu/montana/csci/csci468/parser/statements/ReturnStatement.java:[24,13] cannot find symbol
-[ERROR]   symbol:   variable function
-[ERROR]   location: class edu.montana.csci.csci468.parser.statements.ReturnStatement
-[ERROR] /Users/carson/Projects/msu/classes/current/csci-468-spring2025-wrong/grading/scripts/repos/kyler_smith/src/main/java/edu/montana/csci/csci468/parser/statements/ReturnStatement.java:[25,20] cannot find symbol
-[ERROR]   symbol:   variable function
-[ERROR]   location: class edu.montana.csci.csci468.parser.statements.ReturnStatement
-[ERROR] /Users/carson/Projects/msu/classes/current/csci-468-spring2025-wrong/grading/scripts/repos/kyler_smith/src/main/java/edu/montana/csci/csci468/parser/statements/ReturnStatement.java:[30,17] cannot find symbol
-[ERROR]   symbol:   variable function
-[ERROR]   location: class edu.montana.csci.csci468.parser.statements.ReturnStatement
-[ERROR] /Users/carson/Projects/msu/classes/current/csci-468-spring2025-wrong/grading/scripts/repos/kyler_smith/src/main/java/edu/montana/csci/csci468/parser/statements/ReturnStatement.java:[31,24] cannot find symbol
-[ERROR]   symbol:   variable function
-[ERROR]   location: class edu.montana.csci.csci468.parser.statements.ReturnStatement
-[ERROR] /Users/carson/Projects/msu/classes/current/csci-468-spring2025-wrong/grading/scripts/repos/kyler_smith/src/main/java/edu/montana/csci/csci468/parser/statements/ReturnStatement.java:[41,12] cannot find symbol
-[ERROR]   symbol:   variable function
-[ERROR]   location: class edu.montana.csci.csci468.parser.statements.ReturnStatement
-[ERROR] /Users/carson/Projects/msu/classes/current/csci-468-spring2025-wrong/grading/scripts/repos/kyler_smith/src/main/java/edu/montana/csci/csci468/parser/statements/ReturnStatement.java:[48,18] cannot find symbol
-[ERROR]   symbol:   variable function
-[ERROR]   location: class edu.montana.csci.csci468.parser.statements.ReturnStatement
-[ERROR] /Users/carson/Projects/msu/classes/current/csci-468-spring2025-wrong/grading/scripts/repos/kyler_smith/src/main/java/edu/montana/csci/csci468/parser/statements/ReturnStatement.java:[52,18] cannot find symbol
-[ERROR]   symbol:   variable function
-[ERROR]   location: class edu.montana.csci.csci468.parser.statements.ReturnStatement
-[ERROR] /Users/carson/Projects/msu/classes/current/csci-468-spring2025-wrong/grading/scripts/repos/kyler_smith/src/main/java/edu/montana/csci/csci468/parser/statements/ReturnStatement.java:[67,19] cannot find symbol
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.1:compile (default-compile) on project csci-468-spring2022: Compilation failure
+[ERROR] /Users/carson/Projects/msu/classes/current/csci-468-spring2025-wrong/grading/scripts/repos/kyler_smith/src/main/java/edu/montana/csci/csci468/parser/statements/ReturnStatement.java:[68,19] cannot find symbol
 [ERROR]   symbol:   class ReturnException
 [ERROR]   location: class edu.montana.csci.csci468.parser.statements.ReturnStatement
 [ERROR] -> [Help 1]
