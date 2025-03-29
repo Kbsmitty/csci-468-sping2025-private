@@ -7,6 +7,7 @@ import edu.montana.csci.csci468.parser.expressions.Expression;
 
 public class ReturnStatement extends Statement {
     private Expression expression;
+    private FunctionDefinitionStatement function;
 
     public void setExpression(Expression parseExpression) {
         this.expression = addChild(parseExpression);
