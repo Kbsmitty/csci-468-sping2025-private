@@ -25,7 +25,7 @@
 [INFO]  T E S T S
 [INFO] -------------------------------------------------------
 [INFO] Running edu.montana.csci.csci468.tokenizer.CatScriptTokenizerTest
-[INFO] Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.025 s - in edu.montana.csci.csci468.tokenizer.CatScriptTokenizerTest
+[INFO] Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.027 s - in edu.montana.csci.csci468.tokenizer.CatScriptTokenizerTest
 [INFO] Running edu.montana.csci.csci468.parser.CatscriptParserStatementsTest
 Parsing function definition, current token: Token("x"){type=IDENTIFIER, start=0, end=1, line=1, offset=0}
 Parsing function definition, current token: Token("y"){type=IDENTIFIER, start=11, end=12, line=1, offset=11}
@@ -51,7 +51,7 @@ Parsing function definition, current token: Token("var"){type=VAR, start=0, end=
 Parsing function definition, current token: Token("var"){type=VAR, start=0, end=3, line=1, offset=0}
 Parsing function definition, current token: Token("for"){type=FOR, start=0, end=3, line=1, offset=0}
 Parsing function definition, current token: Token("print"){type=PRINT, start=21, end=26, line=1, offset=21}
-[INFO] Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.022 s - in edu.montana.csci.csci468.parser.CatscriptParserStatementsTest
+[INFO] Tests run: 21, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.023 s - in edu.montana.csci.csci468.parser.CatscriptParserStatementsTest
 [INFO] Running edu.montana.csci.csci468.parser.CatscriptParserTypeCheckingTest
 Parsing function definition, current token: Token("print"){type=PRINT, start=28, end=33, line=1, offset=28}
 Parsing function definition, current token: Token("var"){type=VAR, start=0, end=3, line=1, offset=0}
@@ -60,18 +60,18 @@ Parsing function definition, current token: Token("var"){type=VAR, start=0, end=
 Parsing function definition, current token: Token("var"){type=VAR, start=0, end=3, line=1, offset=0}
 Parsing function definition, current token: Token("x"){type=IDENTIFIER, start=11, end=12, line=2, offset=0}
 Parsing function definition, current token: Token("var"){type=VAR, start=0, end=3, line=1, offset=0}
-[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.005 s - in edu.montana.csci.csci468.parser.CatscriptParserTypeCheckingTest
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.006 s - in edu.montana.csci.csci468.parser.CatscriptParserTypeCheckingTest
 [INFO] Running edu.montana.csci.csci468.parser.CatscriptParserErrorsTest
 Parsing function definition, current token: Token("if"){type=IF, start=25, end=27, line=1, offset=25}
 Parsing function definition, current token: Token("return"){type=RETURN, start=39, end=45, line=1, offset=39}
 Parsing function definition, current token: Token("return"){type=RETURN, start=0, end=6, line=1, offset=0}
-[ERROR] Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.004 s <<< FAILURE! - in edu.montana.csci.csci468.parser.CatscriptParserErrorsTest
-[ERROR] returnCoverageErrorsWorks  Time elapsed: 0.003 s  <<< FAILURE!
+[ERROR] Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 0.003 s <<< FAILURE! - in edu.montana.csci.csci468.parser.CatscriptParserErrorsTest
+[ERROR] returnCoverageErrorsWorks  Time elapsed: 0.002 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: No error at index 0
 	at edu.montana.csci.csci468.parser.CatscriptParserErrorsTest.assertError(CatscriptParserErrorsTest.java:56)
 	at edu.montana.csci.csci468.parser.CatscriptParserErrorsTest.returnCoverageErrorsWorks(CatscriptParserErrorsTest.java:27)
 
-[ERROR] topLevelReturnStatementsAreAnError  Time elapsed: 0.001 s  <<< FAILURE!
+[ERROR] topLevelReturnStatementsAreAnError  Time elapsed: 0 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: expected: <Return statements must be within a function> but was: <Unexpected Token>
 	at edu.montana.csci.csci468.parser.CatscriptParserErrorsTest.assertError(CatscriptParserErrorsTest.java:59)
 	at edu.montana.csci.csci468.parser.CatscriptParserErrorsTest.topLevelReturnStatementsAreAnError(CatscriptParserErrorsTest.java:47)
@@ -91,9 +91,9 @@ Parsing function definition, current token: Token("var"){type=VAR, start=0, end=
 Parsing function definition, current token: Token("var"){type=VAR, start=0, end=3, line=1, offset=0}
 Parsing function definition, current token: Token("for"){type=FOR, start=11, end=14, line=2, offset=0}
 Parsing function definition, current token: Token("print"){type=PRINT, start=25, end=30, line=2, offset=14}
-[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in edu.montana.csci.csci468.parser.CatscriptParserSymbolCheckingTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.002 s - in edu.montana.csci.csci468.parser.CatscriptParserSymbolCheckingTest
 [INFO] Running edu.montana.csci.csci468.parser.CatscriptParserExpressionsTest
-[INFO] Tests run: 29, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in edu.montana.csci.csci468.parser.CatscriptParserExpressionsTest
+[INFO] Tests run: 29, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s - in edu.montana.csci.csci468.parser.CatscriptParserExpressionsTest
 [INFO] Running edu.montana.csci.csci468.eval.CatscriptStatementExecutionTest
 Parsing function definition, current token: Token("print"){type=PRINT, start=24, end=29, line=2, offset=0}
 Parsing function definition, current token: Token("if"){type=IF, start=32, end=34, line=2, offset=8}
@@ -124,7 +124,7 @@ Parsing function definition, current token: Token("print"){type=PRINT, start=0, 
 java.lang.UnsupportedOperationException: evaluate needs to be implemented for edu.montana.csci.csci468.parser.expressions.IdentifierExpression
 	at edu.montana.csci.csci468.eval.CatscriptStatementExecutionTest.recursiveFunctionWorksProperly(CatscriptStatementExecutionTest.java:75)
 
-[ERROR] localVarStatementsWorkProperly  Time elapsed: 0 s  <<< ERROR!
+[ERROR] localVarStatementsWorkProperly  Time elapsed: 0.001 s  <<< ERROR!
 java.lang.UnsupportedOperationException: evaluate needs to be implemented for edu.montana.csci.csci468.parser.expressions.IdentifierExpression
 	at edu.montana.csci.csci468.eval.CatscriptStatementExecutionTest.localVarStatementsWorkProperly(CatscriptStatementExecutionTest.java:43)
 
@@ -148,7 +148,7 @@ java.lang.UnsupportedOperationException: evaluate needs to be implemented for ed
 java.lang.UnsupportedOperationException: evaluate needs to be implemented for edu.montana.csci.csci468.parser.expressions.BooleanLiteralExpression
 	at edu.montana.csci.csci468.eval.CatscriptStatementExecutionTest.ifStatementWorksProperly(CatscriptStatementExecutionTest.java:24)
 
-[ERROR] forStatementWorksProperly  Time elapsed: 0 s  <<< ERROR!
+[ERROR] forStatementWorksProperly  Time elapsed: 0.001 s  <<< ERROR!
 java.lang.UnsupportedOperationException: evaluate needs to be implemented for edu.montana.csci.csci468.parser.expressions.IdentifierExpression
 	at edu.montana.csci.csci468.eval.CatscriptStatementExecutionTest.forStatementWorksProperly(CatscriptStatementExecutionTest.java:61)
 
@@ -196,7 +196,7 @@ Parsing function definition, current token: Token("foo"){type=IDENTIFIER, start=
 Parsing function definition, current token: Token("print"){type=PRINT, start=25, end=30, line=1, offset=25}
 Parsing function definition, current token: Token("foo"){type=IDENTIFIER, start=35, end=38, line=1, offset=35}
 Parsing function definition, current token: Token("print"){type=PRINT, start=33, end=38, line=1, offset=33}
-[ERROR] Tests run: 14, Failures: 0, Errors: 11, Skipped: 0, Time elapsed: 0.008 s <<< FAILURE! - in edu.montana.csci.csci468.eval.CatscriptFunctionArgsAndReturnEvalTest
+[ERROR] Tests run: 14, Failures: 0, Errors: 11, Skipped: 0, Time elapsed: 0.01 s <<< FAILURE! - in edu.montana.csci.csci468.eval.CatscriptFunctionArgsAndReturnEvalTest
 [ERROR] listTypeWithComponentTypeArgWorksProperly  Time elapsed: 0 s  <<< ERROR!
 java.lang.UnsupportedOperationException: evaluate needs to be implemented for edu.montana.csci.csci468.parser.expressions.IdentifierExpression
 	at edu.montana.csci.csci468.eval.CatscriptFunctionArgsAndReturnEvalTest.listTypeWithComponentTypeArgWorksProperly(CatscriptFunctionArgsAndReturnEvalTest.java:56)
@@ -205,7 +205,7 @@ java.lang.UnsupportedOperationException: evaluate needs to be implemented for ed
 java.lang.UnsupportedOperationException: evaluate needs to be implemented for edu.montana.csci.csci468.parser.expressions.IdentifierExpression
 	at edu.montana.csci.csci468.eval.CatscriptFunctionArgsAndReturnEvalTest.stringTypeArgWorksProperly(CatscriptFunctionArgsAndReturnEvalTest.java:44)
 
-[ERROR] noTypeArgWorksProperly  Time elapsed: 0 s  <<< ERROR!
+[ERROR] noTypeArgWorksProperly  Time elapsed: 0.001 s  <<< ERROR!
 java.lang.UnsupportedOperationException: evaluate needs to be implemented for edu.montana.csci.csci468.parser.expressions.IdentifierExpression
 	at edu.montana.csci.csci468.eval.CatscriptFunctionArgsAndReturnEvalTest.noTypeArgWorksProperly(CatscriptFunctionArgsAndReturnEvalTest.java:20)
 
@@ -213,7 +213,7 @@ java.lang.UnsupportedOperationException: evaluate needs to be implemented for ed
 java.lang.UnsupportedOperationException: evaluate needs to be implemented for edu.montana.csci.csci468.parser.expressions.IdentifierExpression
 	at edu.montana.csci.csci468.eval.CatscriptFunctionArgsAndReturnEvalTest.mutliArgumentFunctionsWork(CatscriptFunctionArgsAndReturnEvalTest.java:62)
 
-[ERROR] returnBoolWorksProperly  Time elapsed: 0 s  <<< ERROR!
+[ERROR] returnBoolWorksProperly  Time elapsed: 0.001 s  <<< ERROR!
 java.lang.UnsupportedOperationException: evaluate needs to be implemented for edu.montana.csci.csci468.parser.expressions.BooleanLiteralExpression
 	at edu.montana.csci.csci468.eval.CatscriptFunctionArgsAndReturnEvalTest.returnBoolWorksProperly(CatscriptFunctionArgsAndReturnEvalTest.java:88)
 
@@ -221,7 +221,7 @@ java.lang.UnsupportedOperationException: evaluate needs to be implemented for ed
 java.lang.UnsupportedOperationException: evaluate needs to be implemented for edu.montana.csci.csci468.parser.expressions.BooleanLiteralExpression
 	at edu.montana.csci.csci468.eval.CatscriptFunctionArgsAndReturnEvalTest.returnObjectWorksProperly(CatscriptFunctionArgsAndReturnEvalTest.java:74)
 
-[ERROR] objectTypeArgWorksProperly  Time elapsed: 0 s  <<< ERROR!
+[ERROR] objectTypeArgWorksProperly  Time elapsed: 0.001 s  <<< ERROR!
 java.lang.UnsupportedOperationException: evaluate needs to be implemented for edu.montana.csci.csci468.parser.expressions.IdentifierExpression
 	at edu.montana.csci.csci468.eval.CatscriptFunctionArgsAndReturnEvalTest.objectTypeArgWorksProperly(CatscriptFunctionArgsAndReturnEvalTest.java:26)
 
@@ -277,8 +277,8 @@ java.lang.UnsupportedOperationException: evaluate needs to be implemented for ed
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.602 s
-[INFO] Finished at: 2025-04-11T23:15:14-06:00
+[INFO] Total time:  1.614 s
+[INFO] Finished at: 2025-04-12T00:24:55-06:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.1:test (default-test) on project csci-468-spring2022: There are test failures.
 [ERROR] 
