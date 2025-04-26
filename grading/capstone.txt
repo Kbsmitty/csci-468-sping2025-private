@@ -1,0 +1,4 @@
+Errors:
+
+- Missing source zip
+- Missing kyler_smith_portfolio.pdf
