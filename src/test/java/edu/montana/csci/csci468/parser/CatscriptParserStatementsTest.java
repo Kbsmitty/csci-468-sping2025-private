@@ -9,6 +9,28 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class CatscriptParserStatementsTest extends CatscriptTestBase {
 
+    @Test 
+    public void functionDefWithParamsStatementTypedAndNot() {
+        FunctionDefinitionStatement expr = parseStatement("function x(a, b : int, c) {}");
+        assertNotNull(expr);
+        assertEquals("x", expr.getName());
+        assertEquals(3, expr.getParameterCount());
+        assertEquals("a", expr.getParameterName(0));
+        assertEquals("b", expr.getParameterName(1));
+        assertEquals("c", expr.getParameterName(2));
+        assertEquals(CatscriptType.OBJECT, expr.getParameterType(0));
+        assertEquals(CatscriptType.INT, expr.getParameterType(1));
+        assertEquals(CatscriptType.OBJECT, expr.getParameterType(2));
+    }
+
+
+    @Test
+    public void printStatementEnsuresOpeningParen() {
+        PrintStatement expr = parseStatement("print 1)", false);
+        assertNotNull(expr);
+        assertTrue(expr.hasErrors());
+    }
+
     @Test
     public void printStatement() {
         PrintStatement expr = parseStatement("print(1)");
