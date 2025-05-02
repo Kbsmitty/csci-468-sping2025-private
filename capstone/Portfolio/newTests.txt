@@ -1,0 +1,38 @@
+Tests for Kyler 
+
+Kyler Smith
+
+3+ Unique Tests for Compiler Code:
+
+INSERT INTO THE CatScriptParserStatementsTest.java file
+
+    @Test
+    public void printStatementEnsuresOpeningParen() {
+        PrintStatement expr = parseStatement("print 1)", false);
+        assertNotNull(expr);
+        assertTrue(expr.hasErrors());
+    }
+
+INSERT INTO THE CateScriptTokenizer.java file
+
+    @Test
+    public void basicNumbersAndStrings(){
+	assertTokensAre("1 10 234234 \"joosh\" \"Kyler\" true false", INTEGER, INTEGER, INTEGER, STRING, STRING, TRUE, FALSE, EOF);
+    }
+
+
+INSERT RED LINE INTO THE CatScriptParserStatementsTest.java functionDefWithParamsStatementTypedAndNot test
+
+    @Test
+    public void functionDefWithParamsStatementTypedAndNot() {
+        FunctionDefinitionStatement expr = parseStatement("function x(a, b : int, c) {}");
+        assertNotNull(expr);
+        assertEquals("x", expr.getName());
+        assertEquals(3, expr.getParameterCount());
+        assertEquals("a", expr.getParameterName(0));
+        assertEquals("b", expr.getParameterName(1));
+        assertEquals("c", expr.getParameterName(2));
+        assertEquals(CatscriptType.OBJECT, expr.getParameterType(0));
+        assertEquals(CatscriptType.INT, expr.getParameterType(1));
+        assertEquals(CatscriptType.OBJECT, expr.getParameterType(2));
+    }
