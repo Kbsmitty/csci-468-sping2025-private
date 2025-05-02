@@ -5,6 +5,7 @@ import edu.montana.csci.csci468.eval.CatscriptRuntime;
 import edu.montana.csci.csci468.eval.ReturnException;
 import edu.montana.csci.csci468.parser.*;
 import edu.montana.csci.csci468.parser.expressions.Expression;
+import org.objectweb.asm.Opcodes;
 
 public class ReturnStatement extends Statement {
     private Expression expression;
@@ -76,7 +77,14 @@ public class ReturnStatement extends Statement {
 
     @Override
     public void compile(ByteCodeGenerator code) {
-        super.compile(code);
-    }
+        getExpression().compile(code);
+        CatscriptType type = getProgram().getFunction(function.getName()).getType();
+        if(type.equals(CatscriptType.INT) || type.equals(CatscriptType.BOOLEAN)) {
 
+            code.addInstruction(Opcodes.IRETURN);
+        } else {
+            box(code, getExpression().getType());
+            code.addInstruction(Opcodes.ARETURN);
+        }
+    }
 }
