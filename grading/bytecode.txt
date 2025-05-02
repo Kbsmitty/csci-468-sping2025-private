@@ -10,13 +10,7 @@
 [INFO] Copying 5 resources from src/main/resources to target/classes
 [INFO] 
 [INFO] --- compiler:3.1:compile (default-compile) @ csci-468-spring2022 ---
-[INFO] Changes detected - recompiling the module!
-[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
-[INFO] Compiling 48 source files to /Users/carson/Projects/msu/classes/current/csci-468-spring2025/grading/scripts/repos/kyler_smith/target/classes
-[WARNING] /Users/carson/Projects/msu/classes/current/csci-468-spring2025/grading/scripts/repos/kyler_smith/src/main/java/edu/montana/csci/csci468/bytecode/MethodGenerator.java: /Users/carson/Projects/msu/classes/current/csci-468-spring2025/grading/scripts/repos/kyler_smith/src/main/java/edu/montana/csci/csci468/bytecode/MethodGenerator.java uses or overrides a deprecated API.
-[WARNING] /Users/carson/Projects/msu/classes/current/csci-468-spring2025/grading/scripts/repos/kyler_smith/src/main/java/edu/montana/csci/csci468/bytecode/MethodGenerator.java: Recompile with -Xlint:deprecation for details.
-[WARNING] /Users/carson/Projects/msu/classes/current/csci-468-spring2025/grading/scripts/repos/kyler_smith/src/main/java/edu/montana/csci/csci468/parser/CatscriptType.java: Some input files use unchecked or unsafe operations.
-[WARNING] /Users/carson/Projects/msu/classes/current/csci-468-spring2025/grading/scripts/repos/kyler_smith/src/main/java/edu/montana/csci/csci468/parser/CatscriptType.java: Recompile with -Xlint:unchecked for details.
+[INFO] Nothing to compile - all classes are up to date
 [INFO] 
 [INFO] --- resources:3.3.1:testResources (default-testResources) @ csci-468-spring2022 ---
 [WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
@@ -830,8 +824,8 @@ public class edu/montana/csci/csci466/bytecode/CatScriptProgram18 extends edu/mo
 
 
  ================================================
-[ERROR] Tests run: 12, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 0.058 s <<< FAILURE! - in edu.montana.csci.csci468.bytecode.CatscriptStatementExecutionTest
-[ERROR] localAssignmentStatementsWork  Time elapsed: 0.003 s  <<< ERROR!
+[ERROR] Tests run: 12, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 0.065 s <<< FAILURE! - in edu.montana.csci.csci468.bytecode.CatscriptStatementExecutionTest
+[ERROR] localAssignmentStatementsWork  Time elapsed: 0.004 s  <<< ERROR!
 edu.montana.csci.csci468.parser.ParseErrorException: 
 Parse Errors Occurred:
 
@@ -843,14 +837,14 @@ Error: Incompatible types
 
 	at edu.montana.csci.csci468.bytecode.CatscriptStatementExecutionTest.localAssignmentStatementsWork(CatscriptStatementExecutionTest.java:79)
 
-[ERROR] globalVarStatementsAreSharedAcrossFunctionCalls  Time elapsed: 0.001 s  <<< FAILURE!
+[ERROR] globalVarStatementsAreSharedAcrossFunctionCalls  Time elapsed: 0.002 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: 
 expected: <10
 > but was: <20
 >
 	at edu.montana.csci.csci468.bytecode.CatscriptStatementExecutionTest.globalVarStatementsAreSharedAcrossFunctionCalls(CatscriptStatementExecutionTest.java:66)
 
-[ERROR] globalAssignmentStatementsWork  Time elapsed: 0.001 s  <<< ERROR!
+[ERROR] globalAssignmentStatementsWork  Time elapsed: 0 s  <<< ERROR!
 edu.montana.csci.csci468.parser.ParseErrorException: 
 Parse Errors Occurred:
 
@@ -2057,7 +2051,7 @@ public class edu/montana/csci/csci466/bytecode/CatScriptProgram53 extends edu/mo
 
 
  ================================================
-[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in edu.montana.csci.csci468.bytecode.CatscriptBasicExpressionCompileTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in edu.montana.csci.csci468.bytecode.CatscriptBasicExpressionCompileTest
 [INFO] Running edu.montana.csci.csci468.bytecode.CatscriptFunctionArgsAndReturnCompileTest
 Parsing function definition, current token: Token("print"){type=PRINT, start=30, end=35, line=1, offset=30}
 Parsing function definition, current token: Token("foo"){type=IDENTIFIER, start=40, end=43, line=1, offset=40}
@@ -2895,7 +2889,7 @@ public class edu/montana/csci/csci466/bytecode/CatScriptProgram72 extends edu/mo
 
 
  ================================================
-[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.016 s - in edu.montana.csci.csci468.bytecode.CatscriptFunctionArgsAndReturnCompileTest
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s - in edu.montana.csci.csci468.bytecode.CatscriptFunctionArgsAndReturnCompileTest
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -2912,8 +2906,8 @@ public class edu/montana/csci/csci466/bytecode/CatScriptProgram72 extends edu/mo
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.861 s
-[INFO] Finished at: 2025-05-02T12:56:31-06:00
+[INFO] Total time:  1.251 s
+[INFO] Finished at: 2025-05-02T14:56:47-06:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.1:test (default-test) on project csci-468-spring2022: There are test failures.
 [ERROR] 
