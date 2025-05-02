@@ -11,6 +11,11 @@ import static org.junit.jupiter.api.Assertions.*;
 public class CatScriptTokenizerTest extends CatscriptTestBase {
 
     @Test
+    public void basicNumbersAndStrings(){
+        assertTokensAre("1 10 234234 \"joosh\" \"Kyler\" true false", INTEGER, INTEGER, INTEGER, STRING, STRING, TRUE, FALSE, EOF);
+    }
+
+    @Test
     public void basicTokenizerTest(){
         assertTokensAre("1 + 1", INTEGER, PLUS, INTEGER, EOF);
         assertTokensAre("1 + 1", "1", "+", "1", "<EOF>");
