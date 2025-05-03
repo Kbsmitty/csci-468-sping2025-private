@@ -2051,7 +2051,7 @@ public class edu/montana/csci/csci466/bytecode/CatScriptProgram53 extends edu/mo
 
 
  ================================================
-[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.008 s - in edu.montana.csci.csci468.bytecode.CatscriptBasicExpressionCompileTest
+[INFO] Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.007 s - in edu.montana.csci.csci468.bytecode.CatscriptBasicExpressionCompileTest
 [INFO] Running edu.montana.csci.csci468.bytecode.CatscriptFunctionArgsAndReturnCompileTest
 Parsing function definition, current token: Token("print"){type=PRINT, start=30, end=35, line=1, offset=30}
 Parsing function definition, current token: Token("foo"){type=IDENTIFIER, start=40, end=43, line=1, offset=40}
@@ -2889,7 +2889,7 @@ public class edu/montana/csci/csci466/bytecode/CatScriptProgram72 extends edu/mo
 
 
  ================================================
-[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.014 s - in edu.montana.csci.csci468.bytecode.CatscriptFunctionArgsAndReturnCompileTest
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s - in edu.montana.csci.csci468.bytecode.CatscriptFunctionArgsAndReturnCompileTest
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -2906,8 +2906,8 @@ public class edu/montana/csci/csci466/bytecode/CatScriptProgram72 extends edu/mo
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.248 s
-[INFO] Finished at: 2025-05-02T22:44:29-06:00
+[INFO] Total time:  1.271 s
+[INFO] Finished at: 2025-05-02T23:54:01-06:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.1:test (default-test) on project csci-468-spring2022: There are test failures.
 [ERROR] 
