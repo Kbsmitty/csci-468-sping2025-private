@@ -824,7 +824,7 @@ public class edu/montana/csci/csci466/bytecode/CatScriptProgram18 extends edu/mo
 
 
  ================================================
-[ERROR] Tests run: 12, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 0.063 s <<< FAILURE! - in edu.montana.csci.csci468.bytecode.CatscriptStatementExecutionTest
+[ERROR] Tests run: 12, Failures: 1, Errors: 2, Skipped: 0, Time elapsed: 0.064 s <<< FAILURE! - in edu.montana.csci.csci468.bytecode.CatscriptStatementExecutionTest
 [ERROR] localAssignmentStatementsWork  Time elapsed: 0.004 s  <<< ERROR!
 edu.montana.csci.csci468.parser.ParseErrorException: 
 Parse Errors Occurred:
@@ -837,14 +837,14 @@ Error: Incompatible types
 
 	at edu.montana.csci.csci468.bytecode.CatscriptStatementExecutionTest.localAssignmentStatementsWork(CatscriptStatementExecutionTest.java:79)
 
-[ERROR] globalVarStatementsAreSharedAcrossFunctionCalls  Time elapsed: 0.002 s  <<< FAILURE!
+[ERROR] globalVarStatementsAreSharedAcrossFunctionCalls  Time elapsed: 0.001 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: 
 expected: <10
 > but was: <20
 >
 	at edu.montana.csci.csci468.bytecode.CatscriptStatementExecutionTest.globalVarStatementsAreSharedAcrossFunctionCalls(CatscriptStatementExecutionTest.java:66)
 
-[ERROR] globalAssignmentStatementsWork  Time elapsed: 0 s  <<< ERROR!
+[ERROR] globalAssignmentStatementsWork  Time elapsed: 0.001 s  <<< ERROR!
 edu.montana.csci.csci468.parser.ParseErrorException: 
 Parse Errors Occurred:
 
@@ -2889,7 +2889,7 @@ public class edu/montana/csci/csci466/bytecode/CatScriptProgram72 extends edu/mo
 
 
  ================================================
-[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.015 s - in edu.montana.csci.csci468.bytecode.CatscriptFunctionArgsAndReturnCompileTest
+[INFO] Tests run: 15, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.013 s - in edu.montana.csci.csci468.bytecode.CatscriptFunctionArgsAndReturnCompileTest
 [INFO] 
 [INFO] Results:
 [INFO] 
@@ -2906,8 +2906,8 @@ public class edu/montana/csci/csci466/bytecode/CatScriptProgram72 extends edu/mo
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD FAILURE
 [INFO] ------------------------------------------------------------------------
-[INFO] Total time:  1.271 s
-[INFO] Finished at: 2025-05-02T23:54:01-06:00
+[INFO] Total time:  1.286 s
+[INFO] Finished at: 2025-05-03T01:03:30-06:00
 [INFO] ------------------------------------------------------------------------
 [ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:2.22.1:test (default-test) on project csci-468-spring2022: There are test failures.
 [ERROR] 
